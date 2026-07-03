@@ -4,7 +4,10 @@ let form= document.querySelector(".enterNew form");
 let textInput= document.querySelector("#text");
 let dateInput= document.querySelector("#date");
 let subCont= document.querySelector("#submtCont");
-let entries= [];
+let logoutBtn= document.querySelector("#logoutBtn");
+let currentUser = localStorage.getItem("loggedInUser");
+let entries = JSON.parse(localStorage.getItem("entries_" + currentUser)) || [];
+renderEntries();
 addBtn.addEventListener("click",()=>{
     newDiv.classList.toggle("show");
 });
@@ -17,6 +20,7 @@ form.addEventListener("submit",(e)=>{
         return;
     }
     entries.push({text:txt,date:date});
+    saveEntries(); 
     textInput.value="";
     dateInput.value="";
     newDiv.classList.remove("show");
@@ -43,6 +47,14 @@ subCont.addEventListener("click",(e)=>{
     if (e.target.classList.contains("deleteBtn")) {
         let index= e.target.getAttribute("dataIndex");
         entries.splice(index, 1);
+        saveEntries();
         renderEntries();
     }
+});
+function saveEntries(){
+    localStorage.setItem("entries_" + currentUser, JSON.stringify(entries));
+}
+logoutBtn.addEventListener("click", ()=>{
+    localStorage.removeItem("loggedInUser");
+    window.location.href = "index.html";
 });
