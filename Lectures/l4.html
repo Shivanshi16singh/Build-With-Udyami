@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Event Registration</h1>
+    <form>
+        <label for="name"> Name: <br/>
+            <input id="name" type="text" name="Name">
+        </label>
+        <br/>
+        <label for="email">
+            Email:  <br/>
+            <input type="email" name="email" id="email"> <br/>
+        </label>
+        <label for="tel"> Phone: <br/>
+            <input type="tel" name="tel" id="tel"> <br/>
+        </label>
+        <label for="occupation"> Occupation: <br/>
+            <select name="occupation" id="occupation">
+                <option value="other"> Other </option>
+                <option value="engineer">Engineer</option> <br/>
+            </select>
+        </label><br/>
+        Topics for interest: <br/>
+         <input type="checkbox" name="html" id="interest1"> <br/>
+        <label for="interest1">  HTML <br/></label>
+        <input type="checkbox" name="css" id="interest2"> <br/>
+        <label for="interest2"> CSS <br/></label>
+        <input type="checkbox" name="jss" id="interest3"> <br/>
+        <label for="interest3"> JavaScript <br/></label>
+        <label for="comment"> Comments: <br/></label>
+        <textarea name="comment" id="comment" cols="10" rows="60"></textarea>
+        <button type="submit">Register</button>
+    </form>
+
+    <h1>Job Application</h1>
+    <form>
+        <label for="name">Name: <br/></label>
+        <input type="text" name="name" id="name"><br/>
+        <label for="email">Email: <br/> </label>
+        <input type="email" name="email" id="email"> <br/>
+        <label for="phone">Phone: <br/></label>
+        <input type="tel" name="phone" id="phone"> <br/>
+        <label for="resume">Resume: <br/></label>
+        <input type="file" name="resume" id="resume"><br/>
+        <label for="experience">Experience(years):</label> <br/>
+        <input type="number" name="experience" id="experience" min="0" max="50" value="0">
+        
+        <fieldset>
+            <legend>Skills: </legend>
+            <input type="checkbox" name="html" id="html"> <br/>
+            <label for="html">HTML</label> <br/>
+            <input type="checkbox" name="css" id="css"> <br/>
+            <label for="css">CSS</label> <br/>
+            <input type="checkbox" name="js" id="js"> <br/>
+            <label for="js">JavaScript</label> <br>
+        </fieldset>
+        <label for="edu">Highest Education: </label> 
+        <select name="edu" id="edu">
+            <option value="High School">High School</option>
+            <option value="Secondary School">Secondary School</option>
+            <option value="Degree">Degree</option>
+        </select> <br/>
+        <label for="avail">Availability</label> <br> 
+        <input type="radio" name="avail" id="avail1"><br>
+        <label for="avail1">Full Time: </label><br>
+        <input type="radio" name="avail" id="avail2"><br>
+        <label for="avail2">Part Time</label><br>
+        <label for="comment">Additional Comments: </label><br>
+        <textarea name="comment" id="comment" rows="10" cols="90"></textarea>
+        <button type="submit">Submit Application</button>
+    </form>
+
+    <h1>Complex Form</h1>
+    <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email"> 
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone" id="phone">
+        <label for="date">Date of Birth: </label>
+        <input type="date" name="date" id="date">
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" id="gender1">
+        <label for="gender1">Male</label>
+        <input type="radio" name="gender" id="gender2">
+        <label for="gender2">Female</label>
+        <label for="country">Country:</label> 
+        <select name="countrt" id="country">
+            <option value="India">India</option>
+            <option value="Brazil">Brazil</option>
+            <option value="France">France</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Address</legend>
+        <label for="add">Address Street</label>
+        <input type="text" name="add" id="add">
+        <label for="city">City</label>
+        <input type="text" name=" city" id="city">
+        <label for="state">State</label>
+        <input type="text" name="state" id="state">
+        <label for="code">Zip Code</label>
+        <input type="number" name="code" id="code">
+    </fieldset>
+    <fieldset>
+        <legend>Other Information</legend>
+        <label for="comment">Comments</label>
+        <textarea name="comment" id="comment" rows="5px" cols="5px"></textarea>
+        <label for="agree">I agree to the terms of service</label>
+        <input type="checkbox" name="agree" id="agree">
+    </fieldset>
+    <br/>
+    <button type="submit">Submit</button>
+</body>
+</html>
