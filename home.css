@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }.addNew{
     width: 100%;
-    background-color: #4E3524; 
+    background-color: #FFB6C1; 
     padding: 10px 20px;
 }.navCont{
     display: flex;
@@ -16,7 +16,7 @@
 }.list{
     display: inline-block;
 }hr{
-    border: 1px solid brown;
+    border: 1px solid rgb(238, 10, 170);
 }.newBtn{
     border: none;
     font-size: 18px;
@@ -35,7 +35,7 @@
     opacity: 0.5;
     z-index: -1;
 }.enterNew{
-    background-color: bisque;
+    background-color:#FFB6C1;
     font-family: "Risque", serif;
     font-weight: 400;
     font-size: 24px;
@@ -46,7 +46,7 @@
     z-index: 10; 
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.6); 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,7 +59,7 @@
     padding: 5px;
     width: 100%;
 }.submitted{
-    background-color: bisque;
+    background-color: whitesmoke;
     font-family: "Risque", serif;
     font-weight: 400;
     font-size: 20px;
@@ -79,7 +79,7 @@
     width: 100%;
 }.showDate{
     font-size: 14px;
-    color: #4E3524;
+    color: #E75480;
     font-weight: bold;
     margin-bottom: 5px;
 }.showTxt{
@@ -102,12 +102,12 @@
     padding: 8px 20px;
     border-radius: 5px;
     border: none;
-    background-color: #4E3524;
+    background-color: #e61162;
     color: white;
     cursor: pointer;
 }.tangerine{
     font-family: "Tangerine", cursive;
-    color: bisque;
+    color: black;
     font-weight: 700;
     font-size: 30px;
     margin-left: 50px;
@@ -120,5 +120,5 @@
     flex-direction: column;
     gap: 10px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #4E3524;
+    border-bottom: 1px solid #f510bc;
 }
