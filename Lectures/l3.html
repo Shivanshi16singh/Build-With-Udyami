@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+</head>
+<body>
+    <form action="">
+         <!-- action specifies how the data is sent  to server
+        id of input tag and for of label tag should be same
+        input of submit type send the data to server 
+        value inside input tag gets written what data is entered and gets to server
+        placeholder att is the faded text written inside the input area 
+        while entering the data value att can be changed while placeholder is removed automatically
+        attributes: select : dropdown 
+        option
+        button
+        text area
+        feild set- to group different sections
+        legend
+         -->
+        <input type="text" id="txt" placeholder="Enter your name"><br/>
+        <input type="tel" id="telp" placeholder="Enter your mobile no." min="6000000000" max="9999999999"><br/>
+        <input type="number" id="num" placeholder="Enter your marks"><br/>
+        <input type="email" id="mail" placeholder="Enter your email" value="@gmail.com"><br/>
+        <input type="password" id="psw" placeholder="Enter your password"> <br>
+        <input type="url" id="url" placeholder="Enter link" value="https://"><br/>
+        <input type="image" id="img" placeholder="Enter png" src="" alt="image here"> <br/>
+        <input type="file" id="file" placeholder="Insert your file" accept="image/* , text/*"><br/>
+        <input type="search" id="search" placeholder="Search here"><br/>
+        <input type="date" id="date" placeholder="Enter your Date of Birth"> <br/>
+        <input type="time">
+        <input type="datetime-local" id="dateTime" placeholder="Enter the date and time"> <br>
+        <input type="datetime">
+        <input type="month"  id="month" placeholder="Enter the month of admission"> <br/>
+        <input type="checkbox" id="check" placeholder="Click if you are a female"><br/>
+        <input type="radio" id="check" placeholder="Click if you are a female"><br/>
+        <input type="range" id="range" placeholder="Enter the price range" min="0" max="25000"><br/>
+        <input type="submit" name="submit" value="click here"><br>
+        <input type="button" value="Click here"><br>
+        <input type="color" id="coolor" placeholder="Enter the color of background you want"><br/>
+        <input type="reset"> <br>
+        <input type="week" placeholder="enter the week"> <br/>
+        <br>
+        <br>
+        <fieldset>
+            <legend>Gender</legend><br/>
+<input type="radio" id="checkF" name="gender">
+<label for="checkF">Female</label><br/>
+
+<input type="radio" id="checkM" name="gender">
+<label for="checkM">Male</label><br/>
+
+<input type="radio" id="checkO" name="gender">
+<label for="checkO">Others</label><br/>
+        </fieldset>
+        <br>
+        <fieldset>
+            <label for="selectDish">Select your favourite dish: </label>
+            <select name="dishes" id="selectDish" multiple>
+                <option value="dosa">Dosa</option>
+                <option value="golgappe">GolGappe</option>
+                <option value="idli">Idli</option>
+                <option value="sambhar">Sambhar</option>
+                <option value="mango">Mango Juice</option>
+                <option value="dosa">Dosa</option>
+                <option value="golgappe">GolGappe</option>
+                <option value="idli">Idli</option>
+                <option value="sambhar">Sambhar</option>
+                <option value="mango">Mango Juice</option>
+                <option value="dosa">Dosa</option>
+                <option value="golgappe">GolGappe</option>
+                <option value="idli">Idli</option>
+                <option value="sambhar">Sambhar</option>
+                <option value="mango">Mango Juice</option>
+                <option value="dosa">Dosa</option>
+                <option value="golgappe">GolGappe</option>
+                <option value="idli">Idli</option>
+                <option value="sambhar">Sambhar</option>
+                <option value="mango">Mango Juice</option>
+            </select>
+        </fieldset>
+        <textarea name="story" id="story" rows="50" cols="50" placeholder="enter your text here:"></textarea>
+    </form>
+</body>
+</html>
