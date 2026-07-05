@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    height:300px;
+    width: 300px;
+    margin: 10px;
+}
+div{
+    border: 3px solid black;
+    height: 2000px;
+    background-color: burlywood;
+}#img2{
+    /* position: relative;
+    top:100px;
+    left: 100px; */
+    /* position: absolute; */
+    top: 30px;
+    right: 220px;
+}
+/* .container{
+    position: relative; 
+} */
+#img4{
+    position: fixed;
+}
+#img3{
+    position: sticky;
+    top:100px;
+}.box{
+    background-color: aquamarine;
+    height: 5000px;
+}
