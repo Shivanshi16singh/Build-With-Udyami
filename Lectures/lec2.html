@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lec2.css">
+</head>
+<body>
+    <!--By default, position: static-->
+    <!--
+    It tells you how and where to position your elements
+    along with position property, you can also use top, left, right, bottom 
+    -->
+    <div class="container">
+        <img src="image-1.jpg" alt="img1" id="img1"> <!--img is inline but behaves as inline-block-->
+        <img src="image-2.jpg" alt="img2" id="img2">
+        <img src="image-3.jpg" alt="img3" id="img3">
+        <img src="image-4.png" alt="img4" id="img4">
+        <!--relative: the position is changed w.r.t the current window 
+        You can use the properties like: top, right, left, bottom
+        the original gap of the element is maintained
+        -->
+
+        <!--for overlapping, we use absolute property
+        This property is applied on closest position ancestor
+        therefore we do, 
+        div: position: relative;
+        img: position: absolute;
+
+        as img2 is applied absolute,
+        the original space of img2 is removed and replaced by img 3
+        the original space of img3 is taken by img4
+        now if no attributes like top, bottom, left, right are applied, img2 overlaps img3
+        as top property is applied, img2 shifts down.
+
+        fixed: the position of img3 gets fixed, even if the window gets scrolled down
+
+        sticky: the position of img4 gets sticked after mentioning the top, left, right dimensions
+        it remained sticky till it was inside the parent element
+        -->
+    </div>
+
+    <div class="box"></div>
+</body>
+</html>
