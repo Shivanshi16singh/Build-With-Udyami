@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.box{
+    border: 3px solid black;
+    width: 25%; 
+    /* 25% of the whole parent*/
+}
+.parent{
+    border:3px solid black;
+    background-color: beige;
+}
+.child{
+    border: 1px solid green;
+    background-color: aqua;
+    width: 50%; /*50% of parent*/
+}.container{
+    background-color: rosybrown ;
+    border: 3px solid black;
+    height: 100vh; /* takes complete height of screen*/
+    width: 50vw;/* takes complete width of screen*/
+}.box1{
+    font-size: 100px;
+}
+/* .wrapper{
+    font-size: 10px;
+    background-color:palegoldenrod;
+    padding: 15px;
+}.box2{
+    font-size: 10em;/*It gets multiplied according to the parent element*/
+    /* padding: 10em;
+    background-color: palevioletred;
+} */ 
+p{
+    border: 1px solid black;
+    font-size: 5rem; /*80px*/
+}
+/*for responsive websites use relative designs*/
