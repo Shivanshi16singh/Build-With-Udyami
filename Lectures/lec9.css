@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.box {
+  height: 400px;
+  width: 400px;
+  background-color: beige;
+  border: 2px solid black;
+  /* transition-property: all;
+  transition-duration: 4s;
+  transition-delay: 1s;
+  transition-timing-function: linear; */
+  /* transition: all 4s linear 1s; */
+  transition:
+    width 2s,
+    height 4s;
+}
+.box:hover {
+  /*pseudo class*/
+  width: 2000px;
+  background-color: aqua;
+  height: 1500px;
+}
