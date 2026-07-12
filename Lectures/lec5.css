@@ -12,9 +12,9 @@
     flex-direction: row;
     /* flex-wrap: wrap;
     flex-flow: wrap row; */
-    height: 500px;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;
+    /* justify-content: center;
+    align-items: center; */
 }
 .box{
     height:200px;
@@ -25,15 +25,16 @@
 }
 #box1{
     background-color: aqua;
-    order: 10;
-    flex-shrink: 4;
+    /*order: 10;
+    flex-shrink: 4; */
+    align-self: center;
 }#box2{
     background-color: blue;
-    order: 8;
+    /* order: 8; */
 }#box3{
     background-color: orange;
-    order:6;
+    /* order:6; */
 }#box4{
     background-color: blueviolet;
-    order: 4;
+    /* order: 4; */
 }
