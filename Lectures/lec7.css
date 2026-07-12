@@ -1,0 +1,38 @@
+:root {
+  --primary-color: rgb(2, 2, 46); /*to create custom variables*/
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  background-color: beige;
+  height: 650px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  background-color: blanchedalmond;
+  width: 330px;
+  height: 330px;
+  border: 2px solid black;
+  margin: 5px;
+  padding: 5px;
+  /* box-shadow: -10px 15px brown; */
+  /* box-shadow: 10px 15px 5px brown; */
+  /* box-shadow: 10px 15px 5px 12px brown; */
+  /* box-shadow: inset 10px 15px brown; */
+  /* box-shadow:
+    10px 10px var(--primary-color),
+    10px 20px 20px rgb(248, 248, 248); */
+}
+img {
+  height: 100px;
+  width: auto;
+}
+/*text shadow*/
+h2 {
+  text-shadow: 2px 2px 2px var(--primary-color);
+}
