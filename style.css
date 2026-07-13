@@ -1,59 +1,75 @@
-*{
+body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
-
-body{
+.wrapper{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.wrapper, .wrapper:after{
+    position: fixed;
+    width: 100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index: 0;
+}
+.wrapper li span{
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+    position: absolute;
+    top:0;
+    left:0;
+    --webkit-background-size: cover;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    --webkit-backface-visibility: hidden;
+    animation: animate 25s linear infinite 0s;
 }
-
-.calculator{
-    border: 1px solid #717377;
-    padding: 20px;
-    border-radius: 16px;
-    background: transparent;
-    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+.wrapper li:nth-child(1) span{
+    background-image: url(image-1.jpg);
 }
-
-input{
-    width: 320px;
-    border: none;
-    padding: 24px;
-    margin: 10px;
-    background: transparent;
-    box-shadow: 0px 3px 15px rgba(84, 84, 84, 0.1);
-    font-size: 40px;
-    text-align: right;
-    cursor: pointer;
-    color: #ffffff;
+.wrapper li:nth-child(2) span{
+    background-image: url(image-2.jpg);
+    animation-delay: 5s;
 }
-
-input::placeholder{
-    color: #000000;
+.wrapper li:nth-child(3) span{
+    background-image: url(image-3.jpg);
+    animation-delay: 10s;
 }
-
-button{
-    border: none;
-    width: 60px;
-    height: 60px;
-    margin: 10px;
-    border-radius: 50%;
-    font-size: 20px;
-    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
-    cursor: pointer;
+.wrapper li:nth-child(4) span{
+    background-image: url(image-4.jpg);
+    animation-delay: 15s;
 }
-    
-.equalbtn{
-    background-color: #fb7c14;
+.wrapper li:nth-child(5) span{
+    background-image: url(image-1.jpg);
+    animation-delay: 20s;
 }
-
-.operator{
-    color: #127b14;
+.wrapper li:nth-child(6) span{
+    background-image: url(image-2.jpg);
+    animation-delay: 25s;
+}
+@keyframes animate{
+    0%{
+        opacity:0;
+    }
+    8%{
+        opacity:1;
+        transform: scale(1.05);
+    }
+    17%{
+        opacity:1;
+        transform: scale(1.1);
+    }
+    25%{
+        opacity:0%;
+         transform: scale(1.1);
+    }
+    0%{
+        opacity:0%;
+    }
 }
