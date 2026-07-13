@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(29, 29, 29);
+}
+.box {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  animation-name: colorChange;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(
+    0.455,
+    0.03,
+    0.515,
+    0.955
+  ); /*speed control*/
+  animation-delay: 0s;
+  /* animation-fill-mode: both; /*
+  /*
+  forwards: shows the keyframe's last resting style
+  starts from resting style -> keyframe
+  backwards: shows the keyframe's first resting style
+  starts from  -> keyframe then end keyframe then starting resting style
+  */
+}
+.container {
+  padding: 20px;
+  position: relative;
+}
+@keyframes colorChange {
+  /* from {
+    background-color: orange;
+    top: 00px;
+    left: 50vw;
+  }
+  to {
+    background-color: violet;
+    top: 100vh;
+    left: 50vw;
+  } */
+  0% {
+    background-color: rgb(52, 4, 97);
+    top: 0px;
+    left: 0vw;
+  }
+  12.5% {
+    background-color: rgb(47, 21, 71);
+    top: 0px;
+    left: 50vw;
+  }
+  25% {
+    background-color: rgb(1, 7, 85);
+    top: 0px;
+    left: 100vw;
+  }
+  37.5% {
+    background-color: rgb(8, 56, 88);
+    top: 50vh;
+    left: 100vw;
+  }
+  50% {
+    background-color: rgb(15, 66, 23);
+    top: 100vh;
+    left: 100vw;
+  }
+  62.5% {
+    background-color: rgb(48, 68, 15);
+    top: 100vh;
+    left: 50vw;
+  }
+  75% {
+    background-color: rgb(141, 128, 12);
+    top: 100vh;
+    left: 0vw;
+  }
+  87.5% {
+    background-color: rgb(211, 117, 9);
+    top: 50vh;
+    left: 0vw;
+  }
+  100% {
+    background-color: rgb(189, 28, 7);
+    top: 0vh;
+    left: 0vw;
+  }
+}
