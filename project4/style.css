@@ -1,0 +1,279 @@
+:root {
+  --color-mercury: #8c8c8c;
+  --color-venus: #ece0b0;
+  --color-earth: #2b82c9;
+  --color-mars: #e05a47;
+  --color-jupiter: #d4a373;
+  --color-saturn: #ead7a5;
+  --color-uranus: #a6e3e9;
+  --color-neptune: #27496d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0b0b13;
+  overflow-x: hidden;
+}
+
+.container {
+  height: 150vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.stars::before,
+.stars::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-repeat: repeat;
+  background-image:
+    radial-gradient(1.5px 1.5px at 20px 30px, #fff, transparent),
+    radial-gradient(1px 1px at 90px 150px, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 160px 60px, #fff, transparent),
+    radial-gradient(1px 1px at 210px 220px, #fff, transparent),
+    radial-gradient(2px 2px at 260px 40px, #fff, transparent),
+    radial-gradient(1px 1px at 310px 190px, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 40px 250px, #fff, transparent),
+    radial-gradient(1px 1px at 130px 300px, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 350px 110px, #fff, transparent),
+    radial-gradient(1px 1px at 380px 280px, #fff, transparent);
+  background-size: 400px 400px;
+  opacity: 0.8;
+  animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+.stars::after {
+  background-size: 550px 550px;
+  background-position: 120px 80px;
+  opacity: 0.5;
+  animation-duration: 6s;
+  animation-delay: 1s;
+}
+
+.stars-layer2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-repeat: repeat;
+  background-image:
+    radial-gradient(
+      1px 1px at 60px 90px,
+      rgba(255, 255, 255, 0.7),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 180px 20px,
+      rgba(255, 255, 255, 0.7),
+      transparent
+    ),
+    radial-gradient(
+      1.5px 1.5px at 240px 170px,
+      rgba(255, 255, 255, 0.7),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 300px 60px,
+      rgba(255, 255, 255, 0.7),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 20px 200px,
+      rgba(255, 255, 255, 0.7),
+      transparent
+    );
+  background-size: 320px 320px;
+  animation: drift 60s linear infinite;
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes drift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1000px 500px;
+  }
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+h1 {
+  color: orange;
+  font-size: 90px;
+  padding: 30px;
+  margin: 30px;
+  text-shadow: 2px 2px 8px #ff9900;
+  gap: 2px;
+  margin-top: 20px;
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  background-color: orange;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0 40px #ff9900;
+  z-index: 10;
+}
+
+.planets {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  transition: all;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  position: absolute;
+  z-index: 5;
+}
+
+#box1 {
+  background-color: var(--color-mercury);
+  animation-name: mercury;
+  animation-duration: 3s;
+}
+#box2 {
+  background-color: var(--color-venus);
+  animation-name: venus;
+  animation-duration: 5s;
+}
+#box3 {
+  background-color: var(--color-earth);
+  animation-name: earth;
+  animation-duration: 7s;
+}
+#box4 {
+  background-color: var(--color-mars);
+  animation-name: mars;
+  animation-duration: 9s;
+}
+#box5 {
+  background-color: var(--color-jupiter);
+  animation-name: jupiter;
+  animation-duration: 15s;
+}
+#box6 {
+  background-color: var(--color-saturn);
+  animation-name: saturn;
+  animation-duration: 20s;
+}
+#box7 {
+  background-color: var(--color-uranus);
+  animation-name: uranus;
+  animation-duration: 28s;
+}
+#box8 {
+  background-color: var(--color-neptune);
+  animation-name: neptune;
+  animation-duration: 35s;
+}
+
+@keyframes mercury {
+  from {
+    transform: rotate(0deg) translateX(200px);
+  }
+  to {
+    transform: rotate(360deg) translateX(200px);
+  }
+}
+@keyframes venus {
+  from {
+    transform: rotate(0deg) translateX(320px);
+  }
+  to {
+    transform: rotate(360deg) translateX(320px);
+  }
+}
+@keyframes earth {
+  from {
+    transform: rotate(0deg) translateX(440px);
+  }
+  to {
+    transform: rotate(360deg) translateX(440px);
+  }
+}
+@keyframes mars {
+  from {
+    transform: rotate(0deg) translateX(560px);
+  }
+  to {
+    transform: rotate(360deg) translateX(560px);
+  }
+}
+@keyframes jupiter {
+  from {
+    transform: rotate(0deg) translateX(680px);
+  }
+  to {
+    transform: rotate(360deg) translateX(680px);
+  }
+}
+@keyframes saturn {
+  from {
+    transform: rotate(0deg) translateX(800px);
+  }
+  to {
+    transform: rotate(360deg) translateX(800px);
+  }
+}
+@keyframes uranus {
+  from {
+    transform: rotate(0deg) translateX(920px);
+  }
+  to {
+    transform: rotate(360deg) translateX(920px);
+  }
+}
+@keyframes neptune {
+  from {
+    transform: rotate(0deg) translateX(1040px);
+  }
+  to {
+    transform: rotate(360deg) translateX(1040px);
+  }
+}
